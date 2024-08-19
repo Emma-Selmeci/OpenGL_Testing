@@ -47,7 +47,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);GLEW_STATIC</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);GLEW_STATIC;DEBUGMODE</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)Dependencies;$(SolutionDir)ThirdParty/glm;</AdditionalIncludeDirectories>
     </ClCompile>
@@ -78,10 +78,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="TestDir\common.cpp" />
     <ClCompile Include="TestDir\main.cpp" />
     <ClCompile Include="ThirdParty\stb_image.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="TestDir\common.hpp" />
     <ClInclude Include="ThirdParty\glm\common.hpp" />
     <ClInclude Include="ThirdParty\glm\detail\compute_common.hpp" />
     <ClInclude Include="ThirdParty\glm\detail\compute_vector_decl.hpp" />

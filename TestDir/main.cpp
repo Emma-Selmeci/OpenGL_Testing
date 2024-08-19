@@ -1,8 +1,7 @@
-#include <iostream>
-#include <glew.h>
-#include <glfw3.h>
+#include "common.hpp"
 
 int main() {
+
     GLFWwindow* window;
 
     /* Initialize the library */
@@ -26,7 +25,7 @@ int main() {
     while (!glfwWindowShouldClose(window))
     {
         /* Render here */
-        glClear(GL_COLOR_BUFFER_BIT);
+        debugcall(glClear(GL_DEPTH));
 
         /* Swap front and back buffers */
         glfwSwapBuffers(window);
