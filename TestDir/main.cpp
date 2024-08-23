@@ -2,6 +2,11 @@
 
 int main() {
 
+    DASSERT(1 > 3);
+
+    TRACE(Nothing interesting happening);
+    WARNING(Something interesting happening);
+
     GLFWwindow* window;
 
     /* Initialize the library */

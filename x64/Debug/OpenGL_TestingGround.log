@@ -1,2 +1,24 @@
-﻿  common.cpp
+﻿  main.cpp
+B:\cpp\OpenGL_TestingGround\TestDir\common.hpp(54,1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  (compiling source file 'TestDir/main.cpp')
+  
+B:\cpp\OpenGL_TestingGround\TestDir\common.hpp(60,1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  (compiling source file 'TestDir/main.cpp')
+  
+B:\cpp\OpenGL_TestingGround\TestDir\common.hpp(61,1): warning C4005: 'CRITICAL': macro redefinition
+  (compiling source file 'TestDir/main.cpp')
+  B:\cpp\OpenGL_TestingGround\TestDir\common.hpp(38,1):
+  see previous definition of 'CRITICAL'
+  
+B:\cpp\OpenGL_TestingGround\TestDir\common.hpp(66,1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  (compiling source file 'TestDir/main.cpp')
+  
+B:\cpp\OpenGL_TestingGround\TestDir\common.hpp(67,1): warning C4005: 'WARNING': macro redefinition
+  (compiling source file 'TestDir/main.cpp')
+  B:\cpp\OpenGL_TestingGround\TestDir\common.hpp(39,1):
+  see previous definition of 'WARNING'
+  
+B:\cpp\OpenGL_TestingGround\TestDir\common.hpp(72,1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  (compiling source file 'TestDir/main.cpp')
+  
   OpenGL_TestingGround.vcxproj -> B:\cpp\OpenGL_TestingGround\x64\Debug\OpenGL_TestingGround.exe
