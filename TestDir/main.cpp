@@ -1,8 +1,14 @@
 #include "common.hpp"
 
+
 int main() {
 
-    DASSERT(1 > 3);
+    #ifndef NDEBUG
+    std::cout << "Debug mode active\n";
+    #endif
+
+    int x = 10;
+    assert(x < 10 && "Look, an error");
 
     TRACE(Nothing interesting happening);
     WARNING(Something interesting happening);

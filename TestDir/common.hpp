@@ -2,11 +2,11 @@
 #define COMMON_HPP
 
 #include <iostream>
+#include <fstream>
+#include <cassert>
+
 #include <glew.h>
 #include <glfw3.h>
-
-#include <iostream>
-#include <fstream>
 
 void glDebug(const char*, const int, const char*);
 
@@ -24,7 +24,7 @@ OpenGL error logging is always active in DEBUGMODE
 
 #define WARNING_LOG
 
-#ifdef DEBUGMODE
+#ifndef NDEBUG
 
 	#ifdef RENDER_LOG
 		#define RLOG(logMessage)
@@ -73,12 +73,6 @@ OpenGL error logging is always active in DEBUGMODE
 #define TRACE(logMessage) std::cout << "TRACE: " << fileName << ", line " << __LINE__ << " | " << #logMessage << '\n';
 #else
 #define TRACE(logMessage)
-#endif
-
-#ifdef DEBUGMODE
-	#define DASSERT(a) if(!(a)) WARNING(Assertion failed | #a)
-#else
-	#define DASSERT(a)
 #endif
 
 #endif
