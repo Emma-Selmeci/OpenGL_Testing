@@ -1,42 +1,17 @@
 #include "common.hpp"
-
+#include "contextManager.hpp"
 
 int main() {
+    
+    TRACE(Main method entered);
 
-    #ifndef NDEBUG
-    std::cout << "Debug mode active\n";
-    #endif
-
-    int x = 10;
-    assert(x < 10 && "Look, an error");
-
-    TRACE(Nothing interesting happening);
-    WARNING(Something interesting happening);
-
-    GLFWwindow* window;
-
-    /* Initialize the library */
-    if (!glfwInit())
-        return -1;
-
-    /* Create a windowed mode window and its OpenGL context */
-    window = glfwCreateWindow(640, 480, "Hello World", NULL, NULL);
-    if (!window)
-    {
-        glfwTerminate();
-        return -1;
-    }
-
-    /* Make the window's context current */
-    glfwMakeContextCurrent(window);
-
-    glewInit();
+    GLFWwindow* window = ContextManager::genContext();
 
     /* Loop until the user closes the window */
     while (!glfwWindowShouldClose(window))
     {
         /* Render here */
-        debugcall(glClear(GL_DEPTH));
+        debugcall(glClear(GL_COLOR_BUFFER_BIT));
 
         /* Swap front and back buffers */
         glfwSwapBuffers(window);

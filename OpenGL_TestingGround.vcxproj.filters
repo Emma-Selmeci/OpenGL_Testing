@@ -24,6 +24,9 @@
     <ClCompile Include="TestDir\common.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TestDir\contextManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ThirdParty\stb_image.h">
@@ -894,6 +897,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="TestDir\common.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TestDir\contextManager.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

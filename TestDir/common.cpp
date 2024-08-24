@@ -9,6 +9,12 @@ void glDebug(const char* fileName, const int line, const char* message) {
 		case 1281: GL_ERROR("Invalid enum"); break;
 		default: GL_ERROR("Unrecognized error with code " << errorCode);
 		}
+		exit(2);
 	}
+}
+
+void criticalError(const char* fileName, const int line, const char* message) {
+	std::cout << "CRITICAL: " << fileName << ", line " << line << " | " << message << '\n';
+	system("pause");
 	exit(1);
 }
