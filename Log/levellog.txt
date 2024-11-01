@@ -1,0 +1,3 @@
+
+Warn : entered main()
+Info : this is a trace message 1010

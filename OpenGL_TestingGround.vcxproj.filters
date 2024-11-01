@@ -27,6 +27,18 @@
     <ClCompile Include="TestDir\contextManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TestDir\logger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TestDir\debugLogger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TestDir\shader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TestDir\shaderProgram.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ThirdParty\stb_image.h">
@@ -902,6 +914,27 @@
     <ClInclude Include="TestDir\contextManager.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="TestDir\logger.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TestDir\debugLogger.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TestDir\shader.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TestDir\shaderProgram.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TestDir\vao.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TestDir\vbo.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TestDir\ebo.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="ThirdParty\glm\detail\func_common.inl">
@@ -1318,5 +1351,12 @@
     <None Include="ThirdParty\glm\gtx\wrap.inl">
       <Filter>Header Files</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Res\Shaders\testShader.txt" />
+    <Text Include="Res\Shaders\pointVShader.txt" />
+    <Text Include="Res\Shaders\pointFShader.txt" />
+    <Text Include="Res\Shaders\rectFShader.txt" />
+    <Text Include="Res\Shaders\rectVShader.txt" />
   </ItemGroup>
 </Project>

@@ -1,25 +1,34 @@
 #include "contextManager.hpp"
 
+void ContextManager::myCallBack(GLenum source, GLenum type, GLuint id, GLenum severity, GLsizei length, const GLchar* message, const void* userParam) {
+    std::string str;
+    str.append(message, length);
+    ERROR(CONTEXT, "GL Error " << source << ' ' << type << ' ' << id << ' ' << severity << ' ' << str);
+}
+
 GLFWwindow* ContextManager::genContext() {
     //This method could be further improved by providing detailed error feedback
-	TRACE("Generating GLFW context and initializing GLEW");
+	INFO(CONTEXT, "Generating GLFW context and initializing GLEW");
 
 	if (!glfwInit()) { 
-		CRITICAL("Failed to initialize GLFW context");
+		ERROR(CONTEXT, "Failed to initialize GLFW context");
 	}
 
-    GLFWwindow* window = glfwCreateWindow(640, 480, "Hello World", NULL, NULL);
+    //glfwWindowHint(GLFW_OPENGL_DEBUG_CONTEXT, GL_TRUE); //Needed for automatic debugging
+    GLFWwindow* window = glfwCreateWindow(600, 600, "Hello World", NULL, NULL);
     if (!window) {
-        CRITICAL("Failed to create window");
+        ERROR(CONTEXT, "Failed to create window");
     }
 
     glfwMakeContextCurrent(window);
 
     GLenum err = glewInit();
     if (err != GLEW_OK) {
-        CRITICAL("Failed to initialize GLEW");
+        ERROR(CONTEXT, "Failed to initialize GLEW");
     }
+    
+    //glDebugMessageCallback(myCallBack, nullptr);
 
-    TRACE("Successfully created GLFW context and initialized GLEW  ");
+    INFO(CONTEXT, "Successfully created GLFW context and initialized GLEW  ");
     return window;
 }

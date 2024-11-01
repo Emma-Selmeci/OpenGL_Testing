@@ -1,1 +1,0 @@
-B:\cpp\OpenGL_TestingGround\x64\Debug\OpenGL_TestingGround.exe

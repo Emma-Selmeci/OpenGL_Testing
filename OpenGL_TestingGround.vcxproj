@@ -80,12 +80,23 @@
   <ItemGroup>
     <ClCompile Include="TestDir\common.cpp" />
     <ClCompile Include="TestDir\contextManager.cpp" />
+    <ClCompile Include="TestDir\debugLogger.cpp" />
+    <ClCompile Include="TestDir\logger.cpp" />
     <ClCompile Include="TestDir\main.cpp" />
+    <ClCompile Include="TestDir\shader.cpp" />
+    <ClCompile Include="TestDir\shaderProgram.cpp" />
     <ClCompile Include="ThirdParty\stb_image.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TestDir\common.hpp" />
     <ClInclude Include="TestDir\contextManager.hpp" />
+    <ClInclude Include="TestDir\debugLogger.hpp" />
+    <ClInclude Include="TestDir\ebo.hpp" />
+    <ClInclude Include="TestDir\logger.hpp" />
+    <ClInclude Include="TestDir\shader.hpp" />
+    <ClInclude Include="TestDir\shaderProgram.hpp" />
+    <ClInclude Include="TestDir\vao.hpp" />
+    <ClInclude Include="TestDir\vbo.hpp" />
     <ClInclude Include="ThirdParty\glm\common.hpp" />
     <ClInclude Include="ThirdParty\glm\detail\compute_common.hpp" />
     <ClInclude Include="ThirdParty\glm\detail\compute_vector_decl.hpp" />
@@ -515,6 +526,13 @@
     <None Include="ThirdParty\glm\gtx\vector_angle.inl" />
     <None Include="ThirdParty\glm\gtx\vector_query.inl" />
     <None Include="ThirdParty\glm\gtx\wrap.inl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Res\Shaders\pointFShader.txt" />
+    <Text Include="Res\Shaders\rectFShader.txt" />
+    <Text Include="Res\Shaders\rectVShader.txt" />
+    <Text Include="Res\Shaders\testShader.txt" />
+    <Text Include="Res\Shaders\pointVShader.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
