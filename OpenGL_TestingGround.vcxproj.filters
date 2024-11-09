@@ -39,6 +39,9 @@
     <ClCompile Include="TestDir\shaderProgram.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TestDir\texture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ThirdParty\stb_image.h">
@@ -933,6 +936,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="TestDir\ebo.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TestDir\texture.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

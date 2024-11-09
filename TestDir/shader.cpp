@@ -37,10 +37,10 @@ Shader::Shader(const char* filePath) {
 		std::string fName = "Res/Shaders/";
 		fName.append(filePath); //I'm not sure if this is the fastest way to append
 		fin.open(fName);
-		TRACE(STARTUP, "attempting to open file with fname : " << fName);
+		TRACE(STARTUP, "attempting to open shader with fname : " << fName);
 	} else {
 		fin.open(filePath);
-		TRACE(STARTUP, "attempting to open file with fname : " << filePath);
+		TRACE(STARTUP, "attempting to open shader with fname : " << filePath);
 	}
 
 	if (!fin.is_open()) {

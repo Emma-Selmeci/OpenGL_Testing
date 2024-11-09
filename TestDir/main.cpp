@@ -43,8 +43,8 @@ int main() {
     debugcall(glBufferData(GL_ARRAY_BUFFER, sizeof(vertexData), vertexData, GL_STATIC_DRAW));
     debugcall(glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(elementData), elementData, GL_STATIC_DRAW));
 
-    Shader s1{ "rectVShader.txt" };
-    Shader s2{ "rectFShader.txt" };
+    Shader s1{ "rectVShader.glsl" };
+    Shader s2{ "rectFShader.glsl" };
     ShaderProgram program{ s1,s2 };
     program.use();
 

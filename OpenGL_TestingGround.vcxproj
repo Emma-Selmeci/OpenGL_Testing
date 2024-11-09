@@ -85,6 +85,7 @@
     <ClCompile Include="TestDir\main.cpp" />
     <ClCompile Include="TestDir\shader.cpp" />
     <ClCompile Include="TestDir\shaderProgram.cpp" />
+    <ClCompile Include="TestDir\texture.cpp" />
     <ClCompile Include="ThirdParty\stb_image.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -95,6 +96,7 @@
     <ClInclude Include="TestDir\logger.hpp" />
     <ClInclude Include="TestDir\shader.hpp" />
     <ClInclude Include="TestDir\shaderProgram.hpp" />
+    <ClInclude Include="TestDir\texture.hpp" />
     <ClInclude Include="TestDir\vao.hpp" />
     <ClInclude Include="TestDir\vbo.hpp" />
     <ClInclude Include="ThirdParty\glm\common.hpp" />
