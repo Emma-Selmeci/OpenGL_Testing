@@ -5,6 +5,7 @@
 #include "vao.hpp"
 #include "vbo.hpp"
 #include "ebo.hpp"
+#include "texture.hpp"
 
 #include <iostream>
 
@@ -16,17 +17,15 @@ int main() {
 
     Logger::init();
 
-    WARN(LEVEL, "entered main()");
-    //INFO(LEVEL, "this is a trace message " << t);
-    CRITICAL(STARTUP, "this is a critical message");
+    INFO(STARTUP, "Starting...");
 
     GLFWwindow* window = ContextManager::genContext();
 
     GLfloat vertexData[]{
-        -0.5f,-0.5f,
-        0.5f,-0.5f,
-        -0.5f,0.5f,
-        0.5f,0.5f,
+        -0.5f,-0.5f,0.0f,0.0f,
+        0.5f,-0.5f,1.0f,0.0f,
+        -0.5f,0.5f,0.0f,1.0f,
+        0.5f,0.5f,1.0f,1.0f,
     };
 
     GLuint elementData[]{
@@ -48,8 +47,14 @@ int main() {
     ShaderProgram program{ s1,s2 };
     program.use();
 
-    glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 0, 0);
+    Texture{ "pixel.png" };
+    glUniform1i(glGetUniformLocation(program, "tex"), 0);
+
+    glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 4 * sizeof(float), 0);
     glEnableVertexAttribArray(0);
+
+    glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 4 * sizeof(float), (void*)(2* sizeof(float)));
+    glEnableVertexAttribArray(1);
 
     glPointSize(3.0f);
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f); //Have a black clear color
