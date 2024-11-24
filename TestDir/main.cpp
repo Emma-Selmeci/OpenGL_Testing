@@ -6,6 +6,7 @@
 #include "vbo.hpp"
 #include "ebo.hpp"
 #include "texture.hpp"
+#include "staticText.hpp"
 
 #include <iostream>
 
@@ -19,13 +20,15 @@ int main() {
 
     INFO(STARTUP, "Starting...");
 
+    StaticText("Hello World!", -0.8, 0, 0.2);
+
     GLFWwindow* window = ContextManager::genContext();
 
     GLfloat vertexData[]{
-        -0.5f,-0.5f,0.0f,0.0f,
-        0.5f,-0.5f,1.0f,0.0f,
-        -0.5f,0.5f,0.0f,1.0f,
-        0.5f,0.5f,1.0f,1.0f,
+        -0.5f,-0.5f,0.0f,1.0f, //bottom-left
+        0.5f,-0.5f,1.0f,1.0f, //bottom-right
+        -0.5f,0.5f,0.0f,0.0f, //top-left
+        0.5f,0.5f,1.0f,0.0f, //top-right
     };
 
     GLuint elementData[]{
@@ -47,7 +50,7 @@ int main() {
     ShaderProgram program{ s1,s2 };
     program.use();
 
-    Texture{ "pixel.png" };
+    Texture t{ "myfont.png" };
     glUniform1i(glGetUniformLocation(program, "tex"), 0);
 
     glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 4 * sizeof(float), 0);

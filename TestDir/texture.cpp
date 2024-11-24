@@ -30,15 +30,20 @@ Texture::Texture(const char* filePath) {
 		CRITICAL(STARTUP, << failLog)
 	}
 
-	/*else {
+	
+	/*
+	else {
 		std::cout << "\nSuccesfully loaded data\n"; //temp
 	}
+
+	unsigned char* temp = data;
 
 	std::cout << '\n';
 	std::cout << "Width : " << width << '\n';
 	std::cout << "Height : " << height << '\n';
 
-	for(int i = 0; i < 20; ++i) std::cout << (int) *(data++) << '\n';*/
+	for(int i = 0; i < 20; ++i) std::cout << (int) *(temp++) << '\n';
+	*/
 
 	//If the data pointer is being manipulated, it will not be able to free!!!
 	//Use a copy of data to manipulate image data

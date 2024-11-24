@@ -42,6 +42,9 @@
     <ClCompile Include="TestDir\texture.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TestDir\staticText.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ThirdParty\stb_image.h">
@@ -939,6 +942,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="TestDir\texture.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TestDir\staticText.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
