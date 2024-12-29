@@ -81,6 +81,7 @@
     <ClCompile Include="TestDir\common.cpp" />
     <ClCompile Include="TestDir\contextManager.cpp" />
     <ClCompile Include="TestDir\debugLogger.cpp" />
+    <ClCompile Include="TestDir\inputHandler.cpp" />
     <ClCompile Include="TestDir\logger.cpp" />
     <ClCompile Include="TestDir\main.cpp" />
     <ClCompile Include="TestDir\shader.cpp" />
@@ -94,6 +95,7 @@
     <ClInclude Include="TestDir\contextManager.hpp" />
     <ClInclude Include="TestDir\debugLogger.hpp" />
     <ClInclude Include="TestDir\ebo.hpp" />
+    <ClInclude Include="TestDir\inputHandler.hpp" />
     <ClInclude Include="TestDir\logger.hpp" />
     <ClInclude Include="TestDir\shader.hpp" />
     <ClInclude Include="TestDir\shaderProgram.hpp" />

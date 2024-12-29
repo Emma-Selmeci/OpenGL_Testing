@@ -1,4 +1,5 @@
 #include "contextManager.hpp"
+#include "inputHandler.hpp"
 
 void ContextManager::myCallBack(GLenum source, GLenum type, GLuint id, GLenum severity, GLsizei length, const GLchar* message, const void* userParam) {
     std::string str;
@@ -30,5 +31,8 @@ GLFWwindow* ContextManager::genContext() {
     //glDebugMessageCallback(myCallBack, nullptr);
 
     INFO(CONTEXT, "Successfully created GLFW context and initialized GLEW  ");
+
+    InputHandler::initialize(window);
+
     return window;
 }

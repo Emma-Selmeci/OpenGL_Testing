@@ -20,8 +20,6 @@ int main() {
 
     INFO(STARTUP, "Starting...");
 
-    StaticText("Hello World!", -0.8, 0, 0.2);
-
     GLFWwindow* window = ContextManager::genContext();
 
     GLfloat vertexData[]{
@@ -71,7 +69,7 @@ int main() {
         
         glfwSwapBuffers(window);
         
-        glfwPollEvents();
+        glfwWaitEvents();
     }
 
     glfwTerminate();

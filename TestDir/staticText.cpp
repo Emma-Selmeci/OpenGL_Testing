@@ -73,7 +73,8 @@ StaticText::StaticText(const char* str, float xPos, float yPos, float size) : te
 	texVao.bind();
 	texVbo.bind();
 	texEbo.bind();
-	debugcall(glBufferData(GL_ARRAY_BUFFER, vSize*sizeof(GLfloat), vertexData, GL_STATIC_DRAW));
+	//debugcall(glBufferData(GL_ARRAY_BUFFER, vSize*sizeof(GLfloat), vertexData, GL_STATIC_DRAW));
+	glBufferStorage(GL_ARRAY_BUFFER, vSize * sizeof(GLfloat), vertexData, NULL);
 	debugcall(glBufferData(GL_ELEMENT_ARRAY_BUFFER, eSize*sizeof(GLuint), eboData, GL_STATIC_DRAW));
 
 	delete[] vertexData;
